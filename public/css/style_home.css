@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:#f3e6ff;
+}
+header{
+    font-family: 'Gabriela';
+    background-color: #4d0099;
+    color: white;
+    padding: 20px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    padding:20px;
+
+}
+.title1 {
+    width: 60%;
+    display:inline;
+    margin: 20px;
+    height: 30px;
+}
+.content{
+    width: 70%;
+    display:inline;
+    margin:20px;
+    height: 40px;
+}
+.date1{
+    display: inline;
+    margin: 20px;
+}
+.time1{
+    display: inline;
+    margin:20px;
+}
+.btn{
+    width: 50px;
+    height: 25px;
+    margin:20px;
+}
+
+
+.cont {
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    border: 1px solid #ccc;
+}
+
+.title2 {
+    width: 60%;
+    display:block;
+    margin: 20px;
+    height: 30px;
+}
+
+.text{
+    width: 70%;
+    display:inline;
+    margin:20px;
+    height: 40px;
+}
