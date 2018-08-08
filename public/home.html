@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style_home.css">
+    <link href='https://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet'>
+    <title>Koa Event Planner</title>
 </head>
 <body>
+<header>
+    <h1>Koa Event Planner</h1>
+</header>
+<section class="main">
+    <form>
+        <label for="title">
+            <input type="text" placeholder="Title" class="title1"id="title">
+        </label>
+        <label for="text">
+            <input type="text" placeholder="Text" class="content" id="text">
+        </label>
+        </br>
+        <label for="date">
+            <input type="date" class="date1" id="date">
+        </label>
+        </br>
+        <label for="time">
+            <input type="time" class="time1" id="time">
+        </label>
+        </br>
+        <label for="btn">
+            <input type="submit" value="GO" class="btn" id="btn">
+        </label>
+    </form>
+</section>
 
-    <h1>Welcome In Home Page</h1>
+<section id="results">
+
+</section>
+
+<script src="./js/dom_home.js"></script>
+<!--<script src="/public/js/xhr.js"></script>-->
 
 </body>
 
-<script src="/public/js/xhr.js"></script>
+
+
 
 </html>

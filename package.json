@@ -11,7 +11,7 @@
     "testDB": "NODE_ENV=test node test/testDB.js | tap-spec",
     "cover": "istanbul cover test/test.js",
     "start": "node ./src/server.js",
-    "nodemon":"nodemon ./src/server.js"
+    "nodemon": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",

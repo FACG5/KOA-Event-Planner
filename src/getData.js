@@ -1,8 +1,18 @@
 const dbConnection = require('../database/db_connection');
 
+const getData = cb => {
+    dbConnection.query('SELECT * FROM usres', (err, res) => {
+        if (err) {
+            cb(err);
+        } else {
+            cb(null, res.rows);
+        }
+    });
+};
+
 const addUser = (userName, password, name, cb) => {
     const sqlInsert = {
-        text: "INSERT INTO users (user_name, password, name ) VALUES ($1,$2,$3)",
+        text: "INSERT INTO users (user_name, password, name ) VALUES ($1,$2,$3) returning *",
         values: [userName, password, name]
     };
 
@@ -74,4 +84,4 @@ const searchUser = (userName, password, cb) => {
     });
 };
 
-module.exports = { addUser, addEvent, getEvent, isUserName, searchUser };
+module.exports = { getData, addUser, addEvent, getEvent, isUserName, searchUser };
