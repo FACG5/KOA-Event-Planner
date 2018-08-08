@@ -12,7 +12,7 @@ function router(request, respone) {
     } else if (endpoint === '/home') {
         handlerOtherHTMLFiles(request, respone);
     } else if (endpoint === 'sign_up') {
-        //handlerSignUpPage(request, respone);
+        handlerSignUpPage(request, respone);
     } else {
         otherPages(request, respone);
     }

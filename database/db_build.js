@@ -13,6 +13,5 @@ const buildDatabase = () => {
     });
 };
 
-buildDatabase();
 
 module.exports = buildDatabase;

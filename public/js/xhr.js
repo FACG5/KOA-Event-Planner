@@ -1,4 +1,4 @@
-function fetch(requestType, url, callback, file) {
+function fetch( file, requestType, url, callback) {
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4)

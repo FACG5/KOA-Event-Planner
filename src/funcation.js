@@ -62,9 +62,35 @@ function handlerLogin(request, respone) {
             }
         });
     })
-
-
 }
+
+function handlerSignUpPage(request, respone) {
+    let data = '';
+    request.on('data', function(chunk) {
+        data += chunk;
+    });
+    request.on('end', () => {
+
+const Data = (JSON.parse(data));
+        const userName = Data.user_name;
+        const passward = Data.password;
+        const displayName = Data.display_name;
+        const email = Data.email;
+
+
+
+        addUser(userName, passward,displayName , (err, res) => {
+            if (err) {
+                response.writeHead(500, 'Content-Type:text/html');
+                response.end('<h1>Sorry, there was a problem adding that user</h1>');
+                console.log(err)
+            }
+
+        });
+};
+
+
+
 function readJSONFile(cb) {
     console.log(4, loginStatus)
 
