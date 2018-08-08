@@ -1,8 +1,10 @@
-const { handlerHomePage, handlerOtherFiles, handlerLogin, handlerOtherHTMLFiles, otherPages,handlerSignUpPage } = require('./funcation');
+const { handlerHomePage, handlerOtherFiles, handlerLogin, handlerOtherHTMLFiles, otherPages, handleraddUser, handlerSignUp, handlerSignUpBtn } = require('./handler');
 
 function router(request, respone) {
     const endpoint = request.url;
-    console.log('new fucking request');
+
+    //console.log(endpoint);
+
     if (endpoint === '/') {
         handlerHomePage(request, respone);
     } else if (endpoint.includes('public')) {
@@ -11,8 +13,10 @@ function router(request, respone) {
         handlerLogin(request, respone);
     } else if (endpoint === '/home') {
         handlerOtherHTMLFiles(request, respone);
-    } else if (endpoint === 'sign_up') {
-        handlerSignUpPage(request, respone);
+    } else if (endpoint === '/sign_up') {
+        handlerSignUp(request, respone);
+    } else if (endpoint === '/addUser' && request.method === 'POST') {
+        handleraddUser(request, respone);
     } else {
         otherPages(request, respone);
     }
